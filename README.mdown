@@ -4,7 +4,7 @@ This is simple and easy to use CLI tool to backup and restore Zabbix Server data
 
 ## Getting Started
 
-Clone git repository and perform setup process with python setuptools. After setup process completes, package can be installed locally by python **pip**. If you want to deploy and run this tool with specific user, user must have **sudo** privilages.
+Clone git repository and perform setup process with python setuptools. After setup process completes, package can be installed locally by python **pip**.
 
 ```
 # https://github.com/ntsulaia/zabbix-backup-restore.git
@@ -16,7 +16,7 @@ Clone git repository and perform setup process with python setuptools. After set
 
 ### Installing
 
-After setup process is completed, archive file is generated in **zabbix-backup-restore/dist** directory. Now it can be install by python *pip*.
+After setup process is completed, archive file is generated in **zabbix-backup-restore/dist** directory. Now it can be installed by python **pip**.
 
 Installation example:
 
@@ -56,7 +56,11 @@ optional arguments:
 
 ## Usage:
 
+**zabbix-backup** command takes two mandatory options **--backup_path** where backup files will be stored and **--number_of_copies** to keep defined number of backup copies and save storage space.
 
+**zabbix-restore** command takes mandatory option **--file** which is file to be restored. It can be archive file previously backed up by **zabbix-backup** command or **.sql** database dump file if **--only_database** option is used. If **--file** option provides archive file, it is possible to restore only Zabbix Server database (with --only_database option), Zabbix Server configuration (with --only_config option) or restore database and configuration if only **--file** option is provided.
+
+Both backup and restore processes stop Zabbix Server service and start it again after completion. 
 
 ## Author
 
