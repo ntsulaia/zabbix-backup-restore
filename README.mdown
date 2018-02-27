@@ -1,0 +1,67 @@
+# zabbix-backup-restore
+
+This is simple and easy to use CLI tool to backup and restore Zabbix Server database and configuration.
+
+## Getting Started
+
+Clone git repository and perform setup process with python setuptools. After setup process completes, package can be installed locally by python **pip**. If you want to deploy and run this tool with specific user, user must have **sudo** privilages.
+
+```
+# https://github.com/ntsulaia/zabbix-backup-restore.git
+
+# cd zabbix-backup-restore
+
+# python setup.py sdist
+```
+
+### Installing
+
+After setup process is completed, archive file is generated in **zabbix-backup-restore/dist** directory. Now it can be install by python *pip*.
+
+Installation example:
+
+```
+# pip install /<path to zabbix-backup-restore>/zabbix-backup-restore/dist/zabbix-backup-restore-1.0.0.tar.gz
+```
+
+After sucsessful installation **zabbix-backup-restore** can be used directly from command line running **zabbix-backup** and **zabbix-restore** command. Use **--help** to get list of arguments and options of the tool.
+
+```
+# zabbix-backup --help
+
+usage: zabbix-backup [-h] [-v] -b BACKUP_PATH -n NUMBER_OF_COPIES
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -b BACKUP_PATH, --backup_path BACKUP_PATH
+                        absolute path to backup folder
+  -n NUMBER_OF_COPIES, --number_of_copies NUMBER_OF_COPIES
+                        number of backup copies to keep
+
+```
+```
+# zabbix-restore --help
+
+usage: zabbix-restore [-h] [-v] -f FILE [-d | -c]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  -f FILE, --file FILE  absolute path to backup file
+  -d, --only_database   restore only database
+  -c, --only_config     restore only configuration
+
+```
+
+## Usage:
+
+
+
+## Author
+
+**Nino Tsulaia** - (https://github.com/ntsulaia)
+
+## License
+
+This project is licensed under the MIT License - see the (LICENSE) file for details
