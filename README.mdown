@@ -7,7 +7,7 @@ This is simple and easy to use CLI tool to backup and restore Zabbix Server data
 Clone git repository and perform setup process with python setuptools. After setup process completes, package can be installed locally by python **pip**.
 
 ```
-# https://github.com/ntsulaia/zabbix-backup-restore.git
+# git clone https://github.com/ntsulaia/zabbix-backup-restore.git
 
 # cd zabbix-backup-restore
 
