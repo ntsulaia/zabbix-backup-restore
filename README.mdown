@@ -24,7 +24,7 @@ Installation example:
 # pip install /<path to zabbix-backup-restore>/zabbix-backup-restore/dist/zabbix-backup-restore-1.0.0.tar.gz
 ```
 
-After sucsessful installation **zabbix-backup-restore** can be used directly from command line running **zabbix-backup** and **zabbix-restore** command. Use **--help** to get list of arguments and options of the tool.
+After successful installation **zabbix-backup-restore** can be used directly from command line running **zabbix-backup** and **zabbix-restore** commands. Use **--help** to get list of arguments and options of the tool.
 
 ```
 # zabbix-backup --help
@@ -58,9 +58,9 @@ optional arguments:
 
 **zabbix-backup** command takes two mandatory options **--backup_path** where backup files will be stored and **--number_of_copies** to keep defined number of backup copies and save storage space.
 
-**zabbix-restore** command takes mandatory option **--file** which is file to be restored. It can be archive file previously backed up by **zabbix-backup** command or **.sql** database dump file if **--only_database** option is used. If **--file** option provides archive file, it is possible to restore only Zabbix Server database (with --only_database option), Zabbix Server configuration (with --only_config option) or restore database and configuration if only **--file** option is provided.
+**zabbix-restore** command takes mandatory option **--file** which is file to be restored. It can be archive file previously backed up by **zabbix-backup** command or **.sql** database dump file if **--only_database** option is used. If **--file** option provides archive file, it is possible to restore only Zabbix Server database (with --only_database option), Zabbix Server configuration (with --only_config option) or restore both if only **--file** option is provided.
 
-Both backup and restore processes stop Zabbix Server service and start it again after completion. 
+Both backup and restore processes stop Zabbix Server service and start it again after completion.
 
 ## Author
 
